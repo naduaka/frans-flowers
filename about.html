@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Fran | Fran's Flowers</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f5f0;
+      color: #333;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      background-color: #4a7c59;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul a {
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    nav ul a:hover { text-decoration: underline; }
+
+    .page-header {
+      background-color: #4a7c59;
+      color: white;
+      text-align: center;
+      padding: 48px 20px;
+    }
+
+    .page-header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .about-section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .about-section .photo {
+      background-color: #d6e8da;
+      border-radius: 6px;
+      width: 220px;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      flex-shrink: 0;
+    }
+
+    .about-section .bio h2 {
+      font-size: 1.8rem;
+      color: #3a5e45;
+      margin-bottom: 16px;
+    }
+
+    .about-section .bio p {
+      color: #555;
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+
+    .values-section {
+      background-color: #edf4ef;
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .values-section h2 {
+      font-size: 1.8rem;
+      color: #3a5e45;
+      margin-bottom: 24px;
+    }
+
+    .values-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .value-item {
+      background-color: white;
+      border-top: 3px solid #c0727f;
+      border-radius: 4px;
+      padding: 24px 18px;
+      flex: 1 1 180px;
+    }
+
+    .value-item i {
+      color: #c0727f;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .value-item h3 {
+      color: #3a5e45;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .value-item p {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    footer {
+      background-color: #3a5e45;
+      color: rgba(255,255,255,0.75);
+      padding: 40px 24px 16px;
+    }
+
+    .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .footer-columns .brand {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 6px;
+    }
+
+    .footer-columns h4 {
+      color: white;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-columns ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-columns ul li { margin-bottom: 6px; }
+
+    .footer-columns ul a {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.88rem;
+    }
+
+    .footer-columns ul a:hover { color: white; }
+
+    .social-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .social-row a {
+      color: rgba(255,255,255,0.7);
+      font-size: 1rem;
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-row a:hover { color: white; border-color: white; }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    @media (max-width: 600px) {
+      nav ul { display: none; }
+      .about-section { flex-direction: column; }
+      .about-section .photo { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="logo">Fran's Flowers</span>
+    <ul>
+      <li><a href="index.html#flowers">Flowers</a></li>
+      <li><a href="index.html#seasonal">Seasonal</a></li>
+      <li><a href="index.html#testimonials">Reviews</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="about.html">About Fran</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>About Fran</h1>
+    <p>The story behind the blooms</p>
+  </div>
+
+  <div class="about-section">
+    <div class="photo">🌺</div>
+    <div class="bio">
+      <h2>Meet Fran</h2>
+      <p>Fran has been arranging flowers since she was twelve years old, learning the craft from her grandmother in a small garden in the countryside. What started as a childhood hobby became a lifelong passion.</p>
+      <p>In 1998, she opened Fran's Flowers with nothing but a borrowed van, a folding table, and a belief that everyone deserves beautiful flowers. Over two decades later, the shop has become a beloved neighborhood staple.</p>
+      <p>Every bouquet is still arranged by hand with the same care that went into the very first one. Fran believes flowers aren't just decoration — they're how people say the things words can't.</p>
+    </div>
+  </div>
+
+  <div class="values-section">
+    <h2>What We Believe In</h2>
+    <div class="values-grid">
+      <div class="value-item">
+        <i class="fa-solid fa-leaf"></i>
+        <h3>Freshness First</h3>
+        <p>Every arrangement is made with same-day flowers from local growers.</p>
+      </div>
+      <div class="value-item">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Made with Care</h3>
+        <p>We treat every order like it matters — because to someone, it always does.</p>
+      </div>
+      <div class="value-item">
+        <i class="fa-solid fa-seedling"></i>
+        <h3>Sustainably Sourced</h3>
+        <p>We partner with growers who share our commitment to eco-friendly practices.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-columns">
+      <div>
+        <p class="brand">Fran's Flowers</p>
+        <p>Fresh blooms, handcrafted with love since 1998.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html#flowers">Our Flowers</a></li>
+          <li><a href="index.html#seasonal">Seasonal Picks</a></li>
+          <li><a href="index.html#testimonials">Reviews</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="about.html">About Fran</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 Fran's Flowers</p>
+  </footer>
+
+</body>
+</html>
